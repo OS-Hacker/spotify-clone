@@ -9,7 +9,7 @@ const useAuth = (code) => {
   useEffect(() => {
     if (!code || accessToken) return;
     axios
-      .post("https://spotify-clone-jet-psi.vercel.app/login", { code })
+      .post("http://localhost:3000/login", { code })
       .then((res) => {
         setAccessToken(res.data.accessToken);
         setRefreshToken(res.data.refreshToken);
