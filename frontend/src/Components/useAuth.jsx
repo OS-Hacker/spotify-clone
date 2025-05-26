@@ -9,7 +9,7 @@ const useAuth = (code) => {
   useEffect(() => {
     if (!code || accessToken) return;
     axios
-      .post("http://localhost:3000/login", { code })
+      .post("https://spotify-clone-1-n0qq.onrender.com/login", { code })
       .then((res) => {
         setAccessToken(res.data.accessToken);
         setRefreshToken(res.data.refreshToken);
