@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     allowedHosts: [
-      "spotify-clone-1-n0qq.onrender.com", // Your Render hostname
+      "https://spotify-clone-1-n0qq.onrender.com", // Your Render hostname
       "localhost", // For local development
     ],
   },
@@ -15,7 +15,7 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5173,
     allowedHosts: [
-      "spotify-clone-1-n0qq.onrender.com", // Your Render hostname
+      "https://spotify-clone-1-n0qq.onrender.com", // Your Render hostname
       "localhost",
     ],
   },
