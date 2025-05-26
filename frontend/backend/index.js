@@ -67,7 +67,7 @@ app.post("/login", (req, res) => {
 
 // Deployment setup - FIXED
 const dirPath = path.resolve();
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || true) {
   app.use(express.static(path.join(dirPath, "../frontend/dist")));
   app.get("*", (req, res) => {
     res.sendFile(path.join(dirPath, "../frontend/dist/index.html"));
