@@ -18,7 +18,9 @@ app.get("/", (req, res) => {
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: process.env.REDIRECT_URI || "http://127.0.0.1:5173/dashboard",
+    redirectUri:
+      process.env.REDIRECT_URI ||
+      "https://spotify-clone-1-n0qq.onrender.com/dashboard",
     clientId:
       process.env.SPOTIFY_CLIENT_ID || "7322e3c6dc2e49749868c347b09f83cf",
     clientSecret:
@@ -43,7 +45,9 @@ app.post("/refresh", (req, res) => {
 app.post("/login", (req, res) => {
   const code = req.body.code;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: process.env.REDIRECT_URI || "http://127.0.0.1:5173/dashboard",
+    redirectUri:
+      process.env.REDIRECT_URI ||
+      "https://spotify-clone-1-n0qq.onrender.com/dashboard",
     clientId:
       process.env.SPOTIFY_CLIENT_ID || "7322e3c6dc2e49749868c347b09f83cf",
     clientSecret:
